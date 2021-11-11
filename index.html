@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="msapplication-config" content="fav/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
+		<title>Jeu du serpent</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="fav/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="fav/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="fav/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="fav/site.webmanifest" />
+		<link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5" />
+		<link rel="shortcut icon" href="fav/favicon.ico" />
+		<link rel="stylesheet" href="style/main.css" />
+		<script src="script/action/setEndPopupElement.js"></script>
+		<script src="script/class/Apple.js"></script>
+		<script src="script/class/Snake.js"></script>
+		<script src="script/class/Canvas.js"></script>
+		<script src="script/events.js"></script>
+		<script defer src="script/main.js"></script>
+	</head>
+	<body>
+		<h1>Jeu du serpent</h1>
+		<div id="arrows" class="hidden">
+			<img
+				id="arrow-up"
+				src="img/caret-square-up-solid.svg"
+				alt="Flèche du haut"
+				width="50"
+				height="50"
+			/>
+			<img
+				id="arrow-right"
+				src="img/caret-square-right-solid.svg"
+				alt="Flèche droite"
+				width="50"
+				height="50"
+			/>
+			<img
+				id="arrow-down"
+				src="img/caret-square-down-solid.svg"
+				alt="Flèche du bas"
+				width="50"
+				height="50"
+			/>
+			<img
+				id="arrow-left"
+				src="img/caret-square-left-solid.svg"
+				alt="Flèche gauche"
+				width="50"
+				height="50"
+			/>
+		</div>
+		<form id="beginPopup">
+			<div>
+				<label for="size">Grosseur serpent</label>
+				<input
+					type="number"
+					id="size"
+					min="10"
+					max="50"
+					step="10"
+					value="20"
+				/>
+				<span>pixels/bloc</span>
+			</div>
+			<div>
+				<label for="lenght">Longueur initiale</label>
+				<input
+					type="number"
+					id="lenght"
+					min="2"
+					max="20"
+					step="1"
+					value="4"
+				/>
+				<span>blocs</span>
+			</div>
+			<div>
+				<label for="level">Niveau initial</label>
+				<input
+					type="number"
+					id="level"
+					min="1"
+					max="20"
+					step="1"
+					value="5"
+				/>
+				<span>/ 20</span>
+			</div>
+			<div>
+				<label for="increase-level">Changement de niveau</label>
+				<input
+					type="number"
+					id="increase-level"
+					min="10"
+					max="60"
+					step="10"
+					value="20"
+				/>
+				<span>secondes</span>
+			</div>
+			<div>
+				<label for="apples">Pommes ?</label>
+				<input
+					type="number"
+					id="apples"
+					min="0"
+					max="10"
+					step="1"
+					value="0"
+				/>
+			</div>
+			<input type="submit" value="Jouer" />
+			<p id="license">
+				Icônes de touchpad pour version mobile en
+				<a href="https://fontawesome.com/license/free">libre licence</a>,
+				non modifiées
+				<br />
+				Photo de
+				<a
+					href="https://pixabay.com/users/splitshire-364019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=438432"
+					>SplitShire</a
+				>
+				sur
+				<a
+					href="https://pixabay.com/service/license/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=438432"
+					>Pixabay</a
+				>
+			</p>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+@import 'sanitize.css';
+
+body {
+	min-height: 100vh;
+	background: url('../img/bckgr-forest.jpg') no-repeat fixed bottom / cover;
+	user-select: none;
+}
+.hidden {
+	display: none;
+}
+h1,
+#beginPopup,
+#endPopup {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+h1 {
+	display: none;
+	text-align: center;
+	white-space: nowrap;
+	text-shadow: 0 0 2px #191a19, 0 0 30px #00e92c, 0px 0px 5px #00e92c,
+		0 0 150px #00e92c;
+	color: #00e92c;
+}
+#arrow-up {
+	position: absolute;
+	right: 60px;
+	bottom: 90px;
+}
+#arrow-right {
+	position: absolute;
+	right: 30px;
+	bottom: 60px;
+}
+#arrow-down {
+	position: absolute;
+	right: 60px;
+	bottom: 30px;
+}
+#arrow-left {
+	position: absolute;
+	right: 90px;
+	bottom: 60px;
+}
+#beginPopup,
+#endPopup {
+	background-color: blanchedalmond;
+	top: 50%;
+	box-shadow: 1px 1px 1px grey;
+	padding: 30px;
+}
+#beginPopup label {
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+#beginPopup input {
+	width: 50px;
+}
+#beginPopup input:focus {
+	background-color: #eaeaea;
+}
+#beginPopup input[type='submit'],
+#endPopup input[type='button'] {
+	width: 150px;
+	padding: 10px;
+}
+#beginPopup input[type='submit'] {
+	display: block;
+	margin: 10px auto 0;
+}
+#beginPopup #license {
+	font-size: 0.6em;
+}
+#endPopup {
+	text-align: center;
+}
+#endPopup p:first-child {
+	margin-top: 0;
+}
+#endPopup #level,
+#endPopup #applesEaten {
+	color: red;
+}
+canvas {
+	background-color: greenyellow;
+}
+.frozen-canvas {
+	background-color: gray;
+}
+
+@media all and (min-width: 250px) {
+	h1 {
+		display: block;
+		top: 3%;
+		font-size: 2em;
+	}
+}
+
+@media all and (min-width: 500px) {
+	h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media all and (min-width: 750px) {
+	h1 {
+		top: 5%;
+		font-size: 3em;
+	}
+}
+
+@media all and (min-width: 1000px) {
+	h1 {
+		font-size: 3.5em;
+	}
+}
